@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('section, header.hero');
+  const animatedItems = document.querySelectorAll(
+    '.about-content, .skill-card, .project-card, .contact-content'
+  );
 
   navLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      const targetId = link.getAttribute("href");
+    link.addEventListener("click", event => {
+      const href = link.getAttribute("href");
 
-      if (targetId.startsWith("#")) {
-        e.preventDefault();
-        const targetSection = document.querySelector(targetId);
+      if (href && href.startsWith("#")) {
+        const target = document.querySelector(href);
 
-        if (targetSection) {
-          targetSection.scrollIntoView({
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({
             behavior: "smooth",
             block: "start"
           });
@@ -20,15 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const sectionObserver = new IntersectionObserver(
+  const navObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         const id = entry.target.getAttribute("id");
+        if (!id) return;
+
         const currentLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (!currentLink) return;
 
         if (entry.isIntersecting) {
           navLinks.forEach(link => link.classList.remove("active"));
-          if (currentLink) currentLink.classList.add("active");
+          currentLink.classList.add("active");
         }
       });
     },
@@ -39,10 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   sections.forEach(section => {
-    sectionObserver.observe(section);
+    navObserver.observe(section);
   });
 
-  const revealElements = document.querySelectorAll(".skill-card, .project-card, .about-content, .contact-content");
+  animatedItems.forEach(item => {
+    item.classList.add("hidden");
+  });
 
   const revealObserver = new IntersectionObserver(
     entries => {
@@ -58,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  revealElements.forEach(el => {
-    el.classList.add("hidden");
-    revealObserver.observe(el);
+  animatedItems.forEach(item => {
+    revealObserver.observe(item);
   });
 });
