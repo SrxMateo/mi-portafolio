@@ -1,186 +1,296 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SrxMateo | Desarrollador Web</title>
-  <meta name="description" content="Portafolio web de SrxMateo, desarrollador web enfocado en JavaScript, HTML5, CSS3, Node.js, Kotlin e integración de herramientas con IA.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Portafolio de SrxMateo, desarrollador web enfocado en experiencias modernas, automatización, APIs, IA y proyectos digitales." />
+  <meta property="og:title" content="SrxMateo | Desarrollador Web" />
+  <meta property="og:description" content="Portafolio moderno con proyectos, stack técnico e integración de IA." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#home" class="logo">SrxMateo</a>
-      <ul class="nav-links">
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="page-glow page-glow-a" aria-hidden="true"></div>
+  <div class="page-glow page-glow-b" aria-hidden="true"></div>
 
-  <header id="home" class="hero">
-    <div class="container">
-      <p class="subtitle">Desarrollador Web</p>
-      <h1>Hola, soy <span class="highlight">SrxMateo</span></h1>
-      <p class="description">
-        Desarrollo experiencias web modernas, funcionales y escalables. Trabajo con tecnologías frontend y backend,
-        además de integración de herramientas inteligentes para mejorar flujos, automatización y productividad.
-      </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-        <a href="#contact" class="btn btn-secondary">Contactar</a>
-      </div>
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a href="#hero" class="brand" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Logo SrxMateo">
+            <path d="M10 34V14h8l6 8 6-8h8v20h-6V23l-8 10-8-10v11z"></path>
+          </svg>
+        </span>
+        <span class="brand-text">SrxMateo</span>
+      </a>
+
+      <nav aria-label="Principal">
+        <ul class="nav-links">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#skills">Stack</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" data-theme-toggle aria-label="Cambiar tema">
+        <span class="theme-dot"></span>
+      </button>
     </div>
   </header>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>Sobre mí</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>
-            Soy un desarrollador web enfocado en construir soluciones digitales limpias, modernas y útiles.
-            Me interesa tanto la parte visual del frontend como la lógica del backend y la integración entre sistemas.
+  <main id="main">
+    <section class="hero hero-expanded" id="hero">
+      <div class="container hero-stage">
+        <div class="hero-backdrop-lines" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="hero-intro reveal">
+          <p class="eyebrow">Desarrollador web · automatización · IA</p>
+          <span class="hero-chip">Disponible para crear experiencias web con más presencia</span>
+          <h1>
+            Diseño y desarrollo sitios que se ven
+            <span>más grandes</span>,
+            más modernos y mucho menos genéricos.
+          </h1>
+          <p class="hero-text hero-text-wide">
+            Soy SrxMateo. Construyo proyectos web con una mezcla de interfaz potente, estructura técnica sólida, automatización y herramientas de IA. Mi objetivo no es solo que una web funcione: busco que impacte, se sienta actual y tenga personalidad propia.
           </p>
-          <p>
-            Actualmente sigo mejorando en desarrollo full-stack, APIs REST, automatización, servidores y herramientas basadas en IA
-            para optimizar procesos de trabajo y desarrollo.
-          </p>
-          <ul class="about-list">
-            <li>💼 Rol: Desarrollador Web</li>
-            <li>🌐 Proyecto principal: <a href="https://lumacraft.lat" target="_blank" rel="noopener noreferrer">lumacraft.lat</a></li>
-            <li>🚀 Enfoque: Web, automatización, APIs, servidores y herramientas inteligentes</li>
-          </ul>
+
+          <div class="hero-actions hero-actions-wide">
+            <a class="btn btn-primary magnetic" href="#projects">Explorar proyectos</a>
+            <a class="btn btn-ghost magnetic" href="https://lumacraft.lat" target="_blank" rel="noopener noreferrer">Ver LumaCraft</a>
+          </div>
+        </div>
+
+        <div class="hero-showcase reveal" aria-label="Presentación visual">
+          <article class="showcase-panel showcase-main">
+            <div>
+              <span class="showcase-kicker">Construcción digital</span>
+              <strong>Interfaces con fuerza visual, mejor orden y mejor narrativa.</strong>
+            </div>
+            <p>
+              Desde landing pages hasta experiencias más técnicas, desarrollo productos con identidad, animación y claridad.
+            </p>
+          </article>
+
+          <article class="showcase-panel showcase-stat">
+            <span class="showcase-number">01</span>
+            <div>
+              <small>Enfoque</small>
+              <strong>Frontend + backend + IA</strong>
+            </div>
+          </article>
+
+          <article class="showcase-panel showcase-stat alt">
+            <span class="showcase-number">02</span>
+            <div>
+              <small>Prioridad</small>
+              <strong>Impacto visual y experiencia real</strong>
+            </div>
+          </article>
+
+          <article class="showcase-panel showcase-stack">
+            <span class="showcase-kicker">Stack principal</span>
+            <div class="showcase-icons">
+              <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" width="28" height="28" loading="lazy">
+              <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="28" height="28" loading="lazy">
+              <img src="https://cdn.simpleicons.org/css/1572B6" alt="CSS3" width="28" height="28" loading="lazy">
+              <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" width="28" height="28" loading="lazy">
+              <img src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="Kotlin" width="28" height="28" loading="lazy">
+            </div>
+          </article>
+        </div>
+
+        <div class="hero-marquee" aria-hidden="true">
+          <div class="hero-marquee-track">
+            <span>WEB DESIGN</span>
+            <span>INTERFACES</span>
+            <span>AUTOMATIZACIÓN</span>
+            <span>IA</span>
+            <span>APIs</span>
+            <span>NODE.JS</span>
+            <span>JAVASCRIPT</span>
+            <span>WEB DESIGN</span>
+            <span>INTERFACES</span>
+            <span>AUTOMATIZACIÓN</span>
+            <span>IA</span>
+            <span>APIs</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2>Habilidades Tecnológicas</h2>
-      <div class="skills-grid">
-
-        <div class="skill-card">
-          <h3>Frontend</h3>
-          <ul>
-            <li>
-              <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript">
-              <span>JavaScript (ES6+)</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5">
-              <span>HTML5</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/css/1572B6" alt="CSS3">
-              <span>CSS3</span>
-            </li>
-          </ul>
+    <section class="section about" id="about">
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Perfil</p>
+          <h2>Un enfoque técnico, visual y práctico.</h2>
         </div>
 
-        <div class="skill-card">
-          <h3>Backend</h3>
-          <ul>
-            <li>
-              <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js">
-              <span>Node.js</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="Kotlin">
-              <span>Kotlin</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/git/F05032" alt="Git">
-              <span>APIs REST y Git</span>
-            </li>
-          </ul>
-        </div>
+        <div class="about-grid">
+          <article class="glass-card reveal about-lead">
+            <p>
+              Soy SrxMateo, desarrollador web enfocado en crear sitios y herramientas con una base técnica sólida, una interfaz atractiva y una experiencia clara para el usuario.
+            </p>
+            <p>
+              Me muevo entre frontend, backend, APIs, automatización y servidores. Además, uso IA de forma estratégica para organizar, acelerar y mejorar procesos de desarrollo.
+            </p>
+          </article>
 
-        <div class="skill-card">
-          <h3>Herramientas</h3>
-          <ul>
-            <li>
-              <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub">
-              <span>GitHub</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/powershell/5391FE" alt="PowerShell">
-              <span>PowerShell</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/minecraft/62B47A" alt="Minecraft">
-              <span>Administración de servidores Minecraft</span>
-            </li>
-          </ul>
+          <article class="glass-card reveal about-points">
+            <ul>
+              <li><span>Rol</span><strong>Desarrollador Web</strong></li>
+              <li><span>Especialidad</span><strong>Web moderna y automatización</strong></li>
+              <li><span>Trabajo destacado</span><strong><a href="https://lumacraft.lat" target="_blank" rel="noopener noreferrer">lumacraft.lat</a></strong></li>
+              <li><span>Interés actual</span><strong>IA, APIs, UX y sistemas web</strong></li>
+            </ul>
+          </article>
         </div>
-
-        <div class="skill-card">
-          <h3>IA y Automatización</h3>
-          <ul>
-            <li>
-              <img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="IA">
-              <span>Uso avanzado de IA</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/googleassistant/4285F4" alt="Prompt Engineering">
-              <span>Prompt Engineering</span>
-            </li>
-            <li>
-              <img src="https://cdn.simpleicons.org/json/FFFFFF" alt="Integración">
-              <span>Integración de herramientas y flujos inteligentes</span>
-            </li>
-          </ul>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Proyectos</h2>
-      <div class="projects-grid">
-        <article class="project-card featured">
-          <h3>LumaCraft</h3>
-          <p>
-            Proyecto principal orientado a presencia web, comunidad y desarrollo alrededor del ecosistema LumaCraft.
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Stack</p>
+          <h2>Habilidades organizadas con una presentación más visual.</h2>
+        </div>
+
+        <div class="skills-bento">
+          <article class="skill-block skill-large reveal">
+            <div class="skill-head">
+              <p>Frontend</p>
+              <h3>Interfaces limpias, modernas y con movimiento.</h3>
+            </div>
+            <ul class="skill-list tech-list">
+              <li><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" width="28" height="28" loading="lazy"><span>JavaScript (ES6+)</span></li>
+              <li><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="28" height="28" loading="lazy"><span>HTML5 semántico</span></li>
+              <li><img src="https://cdn.simpleicons.org/css/1572B6" alt="CSS3" width="28" height="28" loading="lazy"><span>CSS3 responsive y animaciones</span></li>
+            </ul>
+          </article>
+
+          <article class="skill-block reveal">
+            <div class="skill-head">
+              <p>Backend</p>
+              <h3>Lógica, APIs y estructura.</h3>
+            </div>
+            <ul class="skill-list tech-list compact">
+              <li><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" width="24" height="24" loading="lazy"><span>Node.js</span></li>
+              <li><img src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="Kotlin" width="24" height="24" loading="lazy"><span>Kotlin</span></li>
+              <li><img src="https://cdn.simpleicons.org/json/FFFFFF" alt="API" width="24" height="24" loading="lazy"><span>APIs REST</span></li>
+            </ul>
+          </article>
+
+          <article class="skill-block reveal">
+            <div class="skill-head">
+              <p>Herramientas</p>
+              <h3>Flujo técnico del día a día.</h3>
+            </div>
+            <ul class="skill-list tech-list compact">
+              <li><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub" width="24" height="24" loading="lazy"><span>GitHub</span></li>
+              <li><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" width="24" height="24" loading="lazy"><span>Git</span></li>
+              <li><img src="https://cdn.simpleicons.org/powershell/5391FE" alt="PowerShell" width="24" height="24" loading="lazy"><span>PowerShell</span></li>
+            </ul>
+          </article>
+
+          <article class="skill-block skill-wide reveal">
+            <div class="skill-head">
+              <p>IA y automatización</p>
+              <h3>No solo uso IA: la convierto en parte del flujo de trabajo.</h3>
+            </div>
+            <ul class="skill-list tech-list two-col">
+              <li><img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="IA" width="24" height="24" loading="lazy"><span>Uso avanzado de IA</span></li>
+              <li><img src="https://cdn.simpleicons.org/googleassistant/4285F4" alt="Prompt engineering" width="24" height="24" loading="lazy"><span>Prompt engineering</span></li>
+              <li><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="Automatización" width="24" height="24" loading="lazy"><span>Flujos y automatización</span></li>
+              <li><img src="https://cdn.simpleicons.org/swagger/85EA2D" alt="Integración" width="24" height="24" loading="lazy"><span>Integración de herramientas</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Trabajo</p>
+          <h2>Un proyecto principal bien presentado vale más que una lista genérica.</h2>
+        </div>
+
+        <div class="project-showcase reveal">
+          <article class="project-hero-card">
+            <div class="project-copy">
+              <span class="project-badge">Proyecto destacado</span>
+              <h3>LumaCraft</h3>
+              <p>
+                Un proyecto con presencia digital propia, orientado a comunidad, identidad y desarrollo web alrededor de una marca con carácter técnico.
+              </p>
+
+              <div class="project-tags">
+                <span>Web</span>
+                <span>Branding digital</span>
+                <span>Comunidad</span>
+                <span>Experiencia online</span>
+              </div>
+
+              <a class="btn btn-primary magnetic" href="https://lumacraft.lat" target="_blank" rel="noopener noreferrer">Abrir sitio</a>
+            </div>
+
+            <div class="project-visual" aria-hidden="true">
+              <div class="visual-grid">
+                <div class="visual-card visual-card-main">
+                  <span>lumacraft.lat</span>
+                  <strong>Presencia web</strong>
+                </div>
+                <div class="visual-card"><span>UI</span><strong>Moderna</strong></div>
+                <div class="visual-card"><span>Infra</span><strong>Escalable</strong></div>
+                <div class="visual-card"><span>Idea</span><strong>Comunidad</strong></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-shell reveal">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Disponible para seguir creando proyectos más sólidos y visualmente mejores.</h2>
+          <p class="contact-text">
+            Si quieres ver mi trabajo, revisar mi proyecto principal o seguir mi progreso como desarrollador, aquí tienes mis enlaces principales.
           </p>
-          <a href="https://lumacraft.lat" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            Visitar sitio
+        </div>
+
+        <div class="contact-actions">
+          <a class="contact-link magnetic" href="https://github.com/SrxMateo" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+            <strong>@SrxMateo</strong>
           </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contacto</h2>
-      <div class="contact-content">
-        <p>
-          Puedes encontrarme en GitHub o visitar mi proyecto principal. Estoy enfocado en seguir construyendo
-          proyectos web, herramientas útiles y soluciones modernas.
-        </p>
-        <div class="contact-links">
-          <a href="https://github.com/SrxMateo" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
-          <a href="https://lumacraft.lat" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LumaCraft</a>
+          <a class="contact-link magnetic" href="https://lumacraft.lat" target="_blank" rel="noopener noreferrer">
+            <span>Web principal</span>
+            <strong>lumacraft.lat</strong>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 SrxMateo. Todos los derechos reservados.</p>
-      <p>Desarrollo web • APIs • Automatización • IA • Servidores</p>
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>© 2026 SrxMateo</p>
+      <p>Desarrollo web · APIs · automatización · IA · sistemas</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
