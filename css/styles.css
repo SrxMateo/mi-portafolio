@@ -150,7 +150,33 @@ button { font: inherit; cursor: pointer; border: 0; background: none; }
 .brand-text {
   font-family: var(--font-display);
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+.badge-senior {
+  font-size: 0.65rem;
+  background: var(--primary);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  padding: 8px 16px;
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+
 
 .nav-links {
   display: flex;
